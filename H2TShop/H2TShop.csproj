@@ -137,6 +137,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\DataProcessing.cs" />
     <Compile Include="Models\H2TShopDB.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\OrderProduct.cs" />
@@ -148,16 +149,13 @@
     <Compile Include="Models\UnitOfMeasure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountRepository.cs" />
-    <Compile Include="Repositories\BuyerStoreRepository.cs" />
+    <Compile Include="Repositories\SupplierRepository.cs" />
     <Compile Include="Repositories\CatetgoryRepository.cs" />
     <Compile Include="Repositories\CommentRepository.cs" />
-    <Compile Include="Repositories\ImageRepository.cs" />
     <Compile Include="Repositories\NewsRepository.cs" />
     <Compile Include="Repositories\OrderProductContentRepository.cs" />
     <Compile Include="Repositories\OrderProductRepository.cs" />
-    <Compile Include="Repositories\ProductImageMappingRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
-    <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />
     <Compile Include="Repositories\UnitOfMeasureRepository.cs" />
   </ItemGroup>
@@ -202,7 +200,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\account\" />
-    <Folder Include="Controllers\buyer-store\" />
     <Folder Include="Controllers\category\" />
     <Folder Include="Controllers\comment\" />
     <Folder Include="Controllers\news\" />
@@ -210,6 +207,7 @@
     <Folder Include="Controllers\order-product\" />
     <Folder Include="Controllers\product\" />
     <Folder Include="Controllers\status\" />
+    <Folder Include="Controllers\supplier\" />
     <Folder Include="Controllers\unitofmeasure\" />
   </ItemGroup>
   <ItemGroup>

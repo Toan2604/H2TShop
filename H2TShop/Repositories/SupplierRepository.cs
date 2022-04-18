@@ -1,6 +1,6 @@
 ﻿namespace H2TShop.Repositories
 {
-	public class RoleRepository
+	public class SupplierRepository
 	{
 	}
 }
