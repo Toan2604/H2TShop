@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -22,69 +22,69 @@ namespace H2TShop.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� ng??i d�ng")]
-        [Required(ErrorMessage = "Ph?i nh?p M� ng??i d�ng!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã người dùng")]
+        [Required(ErrorMessage = "Phải nhập Mã người dùng!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
-        [DisplayName("H? v� t�n")]
-        [Required(ErrorMessage = "Ph?i nh?p H? v� t�n!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Họ và tên")]
+        [Required(ErrorMessage = "Phải nhập Họ và tên!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Name { get; set; }
 
-        [DisplayName("H? v� t�n")]
-        [Required(ErrorMessage = "Ph?i ch?n Gi?i t�nh!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Giới tính")]
+        [Required(ErrorMessage = "Phải chọn Giới tính!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Gender { get; set; }
 
-		[Display(Name = "Ng�y sinh")]
+		[Display(Name = "Ngày sinh")]
         public DateTime Dob { get; set; }
 
         [DisplayName("Email")]
-        [Required(ErrorMessage = "Ph?i nh?p Email!")]
-        [EmailAddress(ErrorMessage = "Sai ??nh d?ng Email!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [Required(ErrorMessage = "Phải nhập Email!")]
+        [EmailAddress(ErrorMessage = "Sai định dạng Email!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Email { get; set; }
 
-        [DisplayName("S? ?i?n tho?i")]
-        [Required(ErrorMessage = "Ph?i nh?p S? ?i?n tho?i!")]
-        [Phone(ErrorMessage = "Sai ??nh d?ng s? ?i?n tho?i!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Số điện thoại")]
+        [Required(ErrorMessage = "Phải nhập Số điện thoại!")]
+        [Phone(ErrorMessage = "Sai định dạng Số điện thoại!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Phone { get; set; }
 
-        [DisplayName("??a ch?")]
-        [Required(ErrorMessage = "Ph?i nh?p ??a ch?!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Địa chỉ")]
+        [Required(ErrorMessage = "Phải nhập Địa chỉ!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Address { get; set; }
 
-        [DisplayName("T�n ??ng nh?p")]
-        [Required(ErrorMessage = "Ph?i nh?p T�n ??ng nh?p!")]
-        [StringLength(500, MinimumLength = 4, ErrorMessage = "T�n ??ng nh?p ph?i d�i t? 4 k� t? tr? l�n!")]
+        [DisplayName("Tên đăng nhập")]
+        [Required(ErrorMessage = "Phải nhập Tên đăng nhập!")]
+        [StringLength(500, MinimumLength = 4, ErrorMessage = "Tên đăng nhập phải dài từ 4 ký tự trở lên!")]
         public string UserName { get; set; }
 
-        [DisplayName("M?t nh?p")]
-        [Required(ErrorMessage = "Ph?i nh?p M?t kh?u!")]
-        [StringLength(500, MinimumLength = 8, ErrorMessage = "M?t kh?u ph?i c� �t nh?t 8 k� t?!")]
+        [DisplayName("Mật khẩu")]
+        [Required(ErrorMessage = "Phải nhập Mật khẩu!")]
+        [StringLength(500, MinimumLength = 8, ErrorMessage = "Mật khẩu phảii có ít nhấtt 8 ký tự!")]
         public string Password { get; set; }
 
         public string Token { get; set; }
 
         public string Image { get; set; }
 
-        [DisplayName("Ph�n quy?n")]
-        [Required(ErrorMessage = "Ph?i ch?n Ph�n quy?n!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Phân quyền")]
+        [Required(ErrorMessage = "Phải chọn Phân quyền!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Role { get; set; }
 
         public long StatusId { get; set; }
 
-        [DisplayName("Th?i gian t?o m?i")]
+        [DisplayName("Thời gian tạo mới")]
         public DateTime CreatedAt { get; set; }
 
-        [DisplayName("Th?i gian c?p nh?t")]
+        [DisplayName("Thời gian cập nhật")]
         public DateTime Updated { get; set; }
 
-        [DisplayName("Th?i gian x�a")]
+        [DisplayName("Thời gian xóa")]
         public DateTime? DeletedAt { get; set; }
 
         public virtual Status Status { get; set; }

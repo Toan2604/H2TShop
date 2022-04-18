@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,16 +20,16 @@ namespace H2TShop.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� Kh�ch h�ng")]
+        [DisplayName("Mã Khách hàng")]
         public long CustomerId { get; set; }
 
-        [DisplayName("T?ng s? l??ng")]
+        [DisplayName("Tổng Số lượng")]
         public long TotalQuantity { get; set; }
 
-        [DisplayName("Ghi ch�")]
+        [DisplayName("Ghi chú")]
         public string Note { get; set; }
 
-        [DisplayName("T?ng ti?n")]
+        [DisplayName("Tổng tiền")]
         public decimal TotalPrice { get; set; }
 
         public virtual Account Account { get; set; }

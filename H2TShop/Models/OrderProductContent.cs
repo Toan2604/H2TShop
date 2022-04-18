@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,13 +19,13 @@ namespace H2TShop.Models
 
         public long UnitOfMeasureId { get; set; }
 
-		[Display(Name = "S? l??ng")]
+		[Display(Name = "Số lượng")]
         public long Quantity { get; set; }
 
-		[Display(Name = "??n gi�")]
+		[Display(Name = "Đơn giá")]
         public decimal? Price { get; set; }
 
-		[Display(Name = "Th�nh ti?n")]
+		[Display(Name = "Thành tiền")]
         public decimal? Amount { get; set; }
 
         public virtual OrderProduct OrderProduct { get; set; }

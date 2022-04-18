@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,17 +20,17 @@ namespace H2TShop.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� ??n v? ?o")]
-        [Required(ErrorMessage = "Ph?i ch?n M� ??n v?!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã đơn vị đo")]
+        [Required(ErrorMessage = "Phải chọn Mã đơn vị!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
-        [DisplayName("??n v? ?o")]
-        [Required(ErrorMessage = "Ph?i ch?n ??n v?!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Đơn vị đo")]
+        [Required(ErrorMessage = "Phải chọn đơn vị!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Name { get; set; }
 
-        [DisplayName("M� t?")]
+        [DisplayName("Mô tả")]
         public string Description { get; set; }
 
         public DateTime CreatedAt { get; set; }

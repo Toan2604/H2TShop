@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,25 +19,25 @@ namespace H2TShop.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� nh� cung c?p")]
-        [Required(ErrorMessage = "Ph?i nh?p M� nh� cung c?p!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã nhà cung cấp")]
+        [Required(ErrorMessage = "Phải nhập Mã nhà cung cấp!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
-        [DisplayName("T�n nh� cung c?p")]
-        [Required(ErrorMessage = "Ph?i nh?p T�n nh� cung c?p!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 3000 k� t?!")]
+        [DisplayName("Tên nhà cung cấp")]
+        [Required(ErrorMessage = "Phải nhập Tên nhà cung cấp!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 3000 ký tự!")]
         public string Name { get; set; }
 
-        [DisplayName("??a ch?")]
-        [Required(ErrorMessage = "Ph?i nh?p ??a ch?!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 3000 k� t?!")]
+        [DisplayName("Địa chỉ")]
+        [Required(ErrorMessage = "Phải nhập Địa chỉ!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 3000 ký tự!")]
         public string Address { get; set; }
 
-        [DisplayName("S? ?i?n tho?i")]
-        [Required(ErrorMessage = "Ph?i nh?p S? ?i?n tho?i!")]
-        [Phone(ErrorMessage = "Sai ??nh d?ng S? ?i?n tho?i!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Số điện thoại")]
+        [Required(ErrorMessage = "Phải nhập Số điện thoại!")]
+        [Phone(ErrorMessage = "Sai định dạng Số điện thoại!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Phone { get; set; }
 
         public DateTime CreatedAt { get; set; }

@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,33 +20,33 @@ namespace H2TShop.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� order")]
-        [Required(ErrorMessage = "Ph?i nh?p M� order!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã order")]
+        [Required(ErrorMessage = "Phải nhập Mã order!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
-		[Display(Name = "Ng�y ??t")]
+		[Display(Name = "Ngày đặt")]
         public DateTime OrderDate { get; set; }
 
         public long AccountId { get; set; }
 
-		[Display(Name = "T?ng ti?n")]
+		[Display(Name = "Tổng tiền")]
         public decimal Total { get; set; }
 
-        [DisplayName("Ph??ng th?c v?n chuy?n")]
-        [Required(ErrorMessage = "Ph?i ch?n Ph??ng th?c v?n chuy?n!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 3000 k� t?!")]
+        [DisplayName("Phương thức vận chuyển")]
+        [Required(ErrorMessage = "Phải chọn Phương thức vận chuyển!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 3000 ký tự!")]
         public string TransformMethod { get; set; }
 
         public long StatusId { get; set; }
 
-		[Display(Name = "Th?i gian t?o m?i")]
+		[Display(Name = "Thời gian tạo mới")]
         public DateTime CreatedAt { get; set; }
 
-		[Display(Name = "Th?i gian c?p nh?t")]
+		[Display(Name = "Thời gian cập nhật")]
         public DateTime UpdatedAt { get; set; }
 
-		[Display(Name = "Th?i gian x�a")]
+		[Display(Name = "Thời gian xóa")]
         public DateTime? DeletedAt { get; set; }
 
         public bool Used { get; set; }

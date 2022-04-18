@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,26 +19,26 @@ namespace H2TShop.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� tin t?c")]
-        [Required(ErrorMessage = "Ph?i nh?p M� tin t?c!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã tin tức")]
+        [Required(ErrorMessage = "Phải nhập Mã tin tức!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
-        [DisplayName("T�n tin t?c")]
-        [Required(ErrorMessage = "Ph?i nh?p T�n tin t?c!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 3000 k� t?!")]
+        [DisplayName("Tên tin tức")]
+        [Required(ErrorMessage = "Phải nhập Tên tin tức!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 3000 ký tự!")]
         public string Name { get; set; }
 
-        [DisplayName("N?i dung tin t?c")]
-        [Required(ErrorMessage = "Ph?i nh?p N?i dung tin t?c!")]
+        [DisplayName("Nội dung tin tức")]
+        [Required(ErrorMessage = "Phải nhập Nội dung tin tức!")]
         public string Content { get; set; }
 
-        [DisplayName("Ti�u ?? tin t?c")]
-        [Required(ErrorMessage = "Ph?i nh?p Ti�u ?? tin t?c!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 3000 k� t?!")]
+        [DisplayName("Tiêu đề tin tức")]
+        [Required(ErrorMessage = "Phải nhập Tiêu đề tin tức!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 3000 ký tự!")]
         public string Title { get; set; }
 
-        [DisplayName("H�nh ?nh")]
+        [DisplayName("Hình ảnh")]
         public string Image { get; set; }
 
         public DateTime CreatedAt { get; set; }

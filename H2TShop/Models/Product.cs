@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -21,53 +21,53 @@ namespace H2TShop.Models
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� s?n ph?m")]
-        [Required(ErrorMessage = "Ph?i nh?p M� s?n ph?m!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã sản phẩm")]
+        [Required(ErrorMessage = "Phải nhập Mã sản phẩm!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
-        [DisplayName("T�n s?n ph?m")]
-        [Required(ErrorMessage = "Ph?i nh?p T�n s?n ph?m!")]
-        [StringLength(3000, ErrorMessage = "?? d�i kh�ng v??t qu� 3000 k� t?!")]
+        [DisplayName("Tên sản phẩm")]
+        [Required(ErrorMessage = "Phải nhập Tên sản phẩm!")]
+        [StringLength(3000, ErrorMessage = "Độ dài không vượt quá 3000 ký tự!")]
         public string Name { get; set; }
 
-        [DisplayName("M� t?")]
-        [Required(ErrorMessage = "Ph?i nh?p M� t?!")]
+        [DisplayName("Mô tả")]
+        [Required(ErrorMessage = "Phải nhập Mô tả!")]
         public string Description { get; set; }
 
-        [DisplayName("Gi� g?c")]
+        [DisplayName("Giá gốc")]
         public decimal Price { get; set; }
 
         public long StatusId { get; set; }
 
         public long UnitOfMeasureId { get; set; }
 
-        [DisplayName("Gi� b�n")]
+        [DisplayName("Giá bán")]
         public decimal SalePrice { get; set; }
 
-        [DisplayName("S? l??ng")]
+        [DisplayName("Số lượng")]
         public decimal Quantity { get; set; }
 
-        [DisplayName("S? l?n ?� b�n")]
+        [DisplayName("Số lần đã bán")]
         public long Count { get; set; }
 
-        [DisplayName("H�nh ?nh")]
+        [DisplayName("Hình ảnh")]
         public string Image { get; set; }
 
-        [DisplayName("K�ch th??c")]
+        [DisplayName("Kích thước")]
         public string Size { get; set; }
 
         public long CategoryId { get; set; }
 
         public long BuyerStoreId { get; set; }
 
-		[Display(Name = "Th?i gian t?o m?i")]
+		[Display(Name = "Thời gian tạo mới")]
         public DateTime CreatedAt { get; set; }
 
-		[Display(Name = "Th?i gian c?p nh?t")]
+		[Display(Name = "Thời gian cập nhật")]
         public DateTime UpdatedAt { get; set; }
 
-		[Display(Name = "Th?i gian x�a")]
+		[Display(Name = "Thời gian xóa")]
         public DateTime? DeletedAt { get; set; }
 
         public bool Used { get; set; }

@@ -1,4 +1,4 @@
-namespace H2TShop.Models
+﻿namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
@@ -14,17 +14,17 @@ namespace H2TShop.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [DisplayName("M� B�nh lu?n")]
-        [Required(ErrorMessage = "Ph?i nh?p M� b�nh lu?n!")]
-        [StringLength(500, ErrorMessage = "?? d�i kh�ng v??t qu� 500 k� t?!")]
+        [DisplayName("Mã Bình luận")]
+        [Required(ErrorMessage = "Phải nhập Mã bình luận!")]
+        [StringLength(500, ErrorMessage = "Độ dài không vượt quá 500 ký tự!")]
         public string Code { get; set; }
 
         public long NewId { get; set; }
 
         public long AccountId { get; set; }
 
-        [DisplayName("N?i dung")]
-        [Required(ErrorMessage = "Ph?i nh?p N?i dung b�nh lu?n!")]
+        [DisplayName("Nội dung")]
+        [Required(ErrorMessage = "Phải nhập Nội dung bình luận!")]
         public string Content { get; set; }
 
         public DateTime CreatedAt { get; set; }
