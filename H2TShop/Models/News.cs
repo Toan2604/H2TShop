@@ -2,7 +2,8 @@ namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+	using System.ComponentModel;
+	using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
@@ -14,23 +15,30 @@ namespace H2TShop.Models
             Comments = new HashSet<Comment>();
         }
 
+        [Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [Required]
-        [StringLength(500)]
+        [DisplayName("Mã tin t?c")]
+        [Required(ErrorMessage = "Ph?i nh?p Mã tin t?c!")]
+        [StringLength(500, ErrorMessage = "?? dài không v??t quá 500 ký t?!")]
         public string Code { get; set; }
 
-        [Required]
-        [StringLength(3000)]
+        [DisplayName("Tên tin t?c")]
+        [Required(ErrorMessage = "Ph?i nh?p Tên tin t?c!")]
+        [StringLength(3000, ErrorMessage = "?? dài không v??t quá 3000 ký t?!")]
         public string Name { get; set; }
 
-        [Required]
+        [DisplayName("N?i dung tin t?c")]
+        [Required(ErrorMessage = "Ph?i nh?p N?i dung tin t?c!")]
         public string Content { get; set; }
 
-        [Required]
-        [StringLength(3000)]
+        [DisplayName("Tiêu ?? tin t?c")]
+        [Required(ErrorMessage = "Ph?i nh?p Tiêu ?? tin t?c!")]
+        [StringLength(3000, ErrorMessage = "?? dài không v??t quá 3000 ký t?!")]
         public string Title { get; set; }
 
+        [DisplayName("Hình ?nh")]
         public string Image { get; set; }
 
         public DateTime CreatedAt { get; set; }
