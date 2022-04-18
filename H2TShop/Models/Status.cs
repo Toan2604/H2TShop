@@ -2,7 +2,8 @@ namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+	using System.ComponentModel;
+	using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
@@ -16,15 +17,18 @@ namespace H2TShop.Models
             Products = new HashSet<Product>();
             UnitOfMeasures = new HashSet<UnitOfMeasure>();
         }
-
+        [Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [Required]
-        [StringLength(500)]
+        [DisplayName("Mã tr?ng thái")]
+        [Required(ErrorMessage = "Ph?i nh?p Mã tr?ng thái!")]
+        [StringLength(500, ErrorMessage = "?? dài không v??t quá 500 ký t?!")]
         public string Code { get; set; }
 
-        [Required]
-        [StringLength(500)]
+        [DisplayName("Tr?ng thái")]
+        [Required(ErrorMessage = "Ph?i nh?p Tr?ng thái!")]
+        [StringLength(500, ErrorMessage = "?? dài không v??t quá 500 ký t?!")]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

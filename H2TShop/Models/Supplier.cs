@@ -2,7 +2,8 @@ namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+	using System.ComponentModel;
+	using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
@@ -14,23 +15,29 @@ namespace H2TShop.Models
         {
             Products = new HashSet<Product>();
         }
-
+        [Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [Required]
-        [StringLength(500)]
+        [DisplayName("Mã nhà cung c?p")]
+        [Required(ErrorMessage = "Ph?i nh?p Mã nhà cung c?p!")]
+        [StringLength(500, ErrorMessage = "?? dài không v??t quá 500 ký t?!")]
         public string Code { get; set; }
 
-        [Required]
-        [StringLength(3000)]
+        [DisplayName("Tên nhà cung c?p")]
+        [Required(ErrorMessage = "Ph?i nh?p Tên nhà cung c?p!")]
+        [StringLength(3000, ErrorMessage = "?? dài không v??t quá 3000 ký t?!")]
         public string Name { get; set; }
 
-        [Required]
-        [StringLength(3000)]
+        [DisplayName("??a ch?")]
+        [Required(ErrorMessage = "Ph?i nh?p ??a ch?!")]
+        [StringLength(3000, ErrorMessage = "?? dài không v??t quá 3000 ký t?!")]
         public string Address { get; set; }
 
-        [Required]
-        [StringLength(500)]
+        [DisplayName("S? ?i?n tho?i")]
+        [Required(ErrorMessage = "Ph?i nh?p S? ?i?n tho?i!")]
+        [Phone(ErrorMessage = "Sai ??nh d?ng S? ?i?n tho?i!")]
+        [StringLength(500, ErrorMessage = "?? dài không v??t quá 500 ký t?!")]
         public string Phone { get; set; }
 
         public DateTime CreatedAt { get; set; }

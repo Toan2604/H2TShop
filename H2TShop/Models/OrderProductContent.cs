@@ -9,6 +9,8 @@ namespace H2TShop.Models
     [Table("OrderProductContent")]
     public partial class OrderProductContent
     {
+        [Key]
+       //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
         public long ProductId { get; set; }
@@ -17,10 +19,13 @@ namespace H2TShop.Models
 
         public long UnitOfMeasureId { get; set; }
 
+		[Display(Name = "S? l??ng")]
         public long Quantity { get; set; }
 
+		[Display(Name = "??n giá")]
         public decimal? Price { get; set; }
 
+		[Display(Name = "Thành ti?n")]
         public decimal? Amount { get; set; }
 
         public virtual OrderProduct OrderProduct { get; set; }

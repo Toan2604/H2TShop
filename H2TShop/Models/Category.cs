@@ -2,7 +2,8 @@ namespace H2TShop.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+	using System.ComponentModel;
+	using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
@@ -15,18 +16,23 @@ namespace H2TShop.Models
             Products = new HashSet<Product>();
         }
 
+        [Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
-        [Required]
-        [StringLength(500)]
+        [DisplayName("Mã lo?i")]
+        [Required(ErrorMessage = "Ph?i nh?p Mã lo?i!")]
+        [StringLength(500, ErrorMessage = "?? dài không v??t quá 500 ký t?!")]
         public string Code { get; set; }
 
-        [Required]
-        [StringLength(3000)]
+        [DisplayName("Tên lo?i")]
+        [Required(ErrorMessage = "Ph?i nh?p Tên lo?i!")]
+        [StringLength(3000, ErrorMessage = "?? dài không v??t quá 3000 ký t?!")]
         public string Name { get; set; }
 
         public long StatusId { get; set; }
 
+        [DisplayName("Hình ?nh")]
         public string Image { get; set; }
 
         public DateTime CreatedAt { get; set; }

@@ -19,6 +19,7 @@ namespace H2TShop.Models
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
         [DisplayName("Mã ng??i dùng")]
@@ -77,10 +78,13 @@ namespace H2TShop.Models
 
         public long StatusId { get; set; }
 
+        [DisplayName("Th?i gian t?o m?i")]
         public DateTime CreatedAt { get; set; }
 
+        [DisplayName("Th?i gian c?p nh?t")]
         public DateTime Updated { get; set; }
 
+        [DisplayName("Th?i gian xóa")]
         public DateTime? DeletedAt { get; set; }
 
         public virtual Status Status { get; set; }
